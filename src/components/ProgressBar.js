@@ -1,15 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const ProgressBar = props => {
   const { bgColor, completed, containerClass } = props;
 
-  const containerStyles = {
-    height: 20,
-    width: '100%',
-    backgroundColor: "#e0e0de",
-    borderRadius: 50,
-    margin: 50
-  }
+  const Container = styled.div`
+    height: 20;
+    width: 100%;
+    background-color: #e0e0de;
+    border-radius: 50;
+    margin: 50;
+  `;
 
   const fillerStyles = {
     height: '100%',
@@ -18,11 +19,9 @@ const ProgressBar = props => {
   };
 
   return (
-    <div 
-      className={containerClass}
-    >
+    <Container>
       <div style={fillerStyles} />
-    </div>
+    </Container>
   );
 };
 
